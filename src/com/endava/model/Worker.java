@@ -1,17 +1,14 @@
-package Model; /**
+package com.endava.model; /**
  * Created by icebotari on 9/29/2017.
  */
 import java.util.ArrayList;
 import java.util.List;
 
 public class Worker {
-    public String firstname;
-    public String lastName;
-    public int age;
-    public List<String> listOfCountries = new ArrayList<>();
-
-
-    public boolean readyForTrip;
+    private String firstname;
+    private String lastName;
+    private int age;
+    private List<String> listOfCountries = new ArrayList<>();
 
     @Override
     public int hashCode() {
