@@ -38,7 +38,7 @@ public class WorkersUtils {
     }
 
     private Set<Worker> workersReadyForTrip(LocalDateTime startDate, LocalDateTime endDate) {
-        ArrayList<Worker> readyForTripWorkers = new ArrayList<>();
+        List<Worker> readyForTripWorkers = new ArrayList<>();
         for (Map.Entry<LocalDateTime, Worker> entry : hireAndWorkers.entrySet()) {
             if (startDate.isBefore(entry.getKey()) && endDate.isAfter(entry.getKey())) {
                 readyForTripWorkers.add(entry.getValue());
@@ -49,7 +49,7 @@ public class WorkersUtils {
     }
 
     private Set<Worker> canWorkerVisit(Countries country) {
-        HashSet<Worker> ableToVisit = new HashSet<>();
+        Set<Worker> ableToVisit = new HashSet<>();
         for (Map.Entry<LocalDateTime, Worker> entry : sortMap(hireAndWorkers).entrySet()) {
             if (entry.getValue().getListOfCountries().contains(country)){
                 ableToVisit.add(entry.getValue());
