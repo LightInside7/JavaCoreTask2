@@ -1,6 +1,8 @@
 package com.endava.model; /**
  * Created by icebotari on 9/29/2017.
  */
+import com.endava.enums.Countries;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +10,7 @@ public class Worker {
     private String firstname;
     private String lastName;
     private int age;
-    private List<String> listOfCountries = new ArrayList<>();
+    private List<Countries> listOfCountries;
 
     @Override
     public int hashCode() {
@@ -36,12 +38,11 @@ public class Worker {
         return true;
 
     }
-    public Worker(String firstname, String lastName, int age, List<String> array){
+    public Worker(String firstname, String lastName, int age, List<Countries> array){
         this.firstname = firstname;
         this.lastName = lastName;
         this.age = age;
-        this.listOfCountries.addAll(array);
-
+        this.listOfCountries = array;
     }
 
     public String getFirstname() {
@@ -56,7 +57,7 @@ public class Worker {
         return age;
     }
 
-    public List<String> getListOfCountries() {
+    public List<Countries> getListOfCountries() {
         return listOfCountries;
     }
 
@@ -72,7 +73,7 @@ public class Worker {
         this.age = age;
     }
 
-    public void setListOfCountries(List<String> listOfCountries) {
+    public void setListOfCountries(List<Countries> listOfCountries) {
         this.listOfCountries = listOfCountries;
     }
 }

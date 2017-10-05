@@ -17,7 +17,6 @@ public enum Countries {
 
     Countries(String country) {
         this.country = country;
-
     }
 
     public void setCountry(String country) {
@@ -25,7 +24,6 @@ public enum Countries {
     }
 
     public String getCountry() {
-
         return country;
     }
 }
